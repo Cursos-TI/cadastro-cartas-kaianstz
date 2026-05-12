@@ -3,18 +3,19 @@
             int main(){
             
                 char letra1, letra2;
-                char cdc1[5];
+                char cdc1[5]; //Codigo da capital
                 char cdc2[5];
-                char nc1[30];
+                char nc1[30]; // Nome da Cidade
                 char nc2[30];
                 int populacao1;
                 int populacao2;
-                int npt1;
+                int npt1; // Numero de pontos turisticos
                 int npt2;
                 double area1;
                 double area2;
                 double pib1;
                 double pib2;
+                float dp1, dp2, pibc1, pibc2; //Densidade Populacional, PIB per Capita
 
                     printf("CARTA 01\n");
                     printf("Estado: \n");
@@ -47,6 +48,12 @@
                     scanf("%lf", &pib2);
                     printf("Número de Pontos Turísticos: \n");
                     scanf("%d", &npt2);
+
+                    dp1 = (float)(populacao1 / area1);
+                    dp2 = (float)(populacao2 / area2);
+                    pibc1 = pib1 / populacao1;
+                    pibc2 = pib2 / populacao2;
+
                     printf("----------------------------------\n");
 
                         printf("CARTA 01\n");
@@ -57,6 +64,8 @@
                         printf("Área: %lf km²\n", area1);
                         printf("PIB: %lf bilhões de Reais\n", pib1);
                         printf("Número de Pontos Turísticos: %d\n", npt1);
+                        printf("Densidade Populacional: %.2f Hab/km²\n", dp1);
+                        printf("PIB per Capita: %.2f Reais\n", pibc1);
                         printf("-----------------------------------------\n");
                         printf("CARTA 02\n");
                         printf("Estado: %c\n", letra2);
@@ -66,6 +75,8 @@
                         printf("Área: %lf km²\n", area2);
                         printf("PIB: %lf bilhões de Reais\n", pib2);
                         printf("Número de Pontos Turísticos: %d\n", npt2);
+                        printf("Densidade Populacional: %.2f Hab/km²\n", dp2);
+                        printf("PIB per Capita: %.2f Reais\n", pibc2);
                     
                             return 0;
 
