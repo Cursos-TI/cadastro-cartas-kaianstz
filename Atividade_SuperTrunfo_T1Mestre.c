@@ -135,16 +135,17 @@
                         // 2. MENU DE COMPARAÇÃO
                         printf("-----------------------------------------\n");                        
                         printf("Segundo Menu de Comparação:\n");
-                        printf("1. População\n");
-                        printf("2. Área\n");
-                        printf("3. PIB\n");
-                        printf("4. Número de Pontos Turísticos\n");
-                        printf("5. Densidade Populacional\n");
+                        // Exibir opções exceto a que foi escolhida no atributo1
+                        if (atributo1 != 1) printf("1. População\n");
+                        if (atributo1 != 2) printf("2. Área\n");
+                        if (atributo1 != 3) printf("3. PIB\n");
+                        if (atributo1 != 4) printf("4. Número de Pontos Turísticos\n");
+                        if (atributo1 != 5) printf("5. Densidade Populacional\n");
                         printf("Escolha uma opção para comparar: ");
                         scanf("%d", &atributo2);
                         
                         // Verificação para evitar a comparação do mesmo atributo
-                        if (atributo1 == atributo2) {
+                        if (atributo2 == atributo1) {
                             printf("Atributo já comparado. Escolha um atributo diferente para a segunda comparação.\n");
                         }
 
